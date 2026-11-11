@@ -1,0 +1,40 @@
+# Finite-horizon settings and termination are in the companion TOML file.
+discount: 1.0
+values: reward
+states: s0 s1 s2 s3 s4 s5 s6
+actions: a0 a1 a2
+observations: o0 o1 o2 o3 o4 o5
+start: s0
+T: a0 : s0 : s1 0.5
+T: a0 : s0 : s2 0.5
+T: a0 : s1 : s3 1.0
+T: a0 : s2 : s4 1.0
+T: a0 : s3 : s1 1.0
+T: a0 : s4 : s2 1.0
+T: a0 : s5 : s0 1.0
+T: a0 : s6 : s0 1.0
+R: a0 : s5 : * : * 2.0
+T: a1 : s0 : s1 0.5
+T: a1 : s0 : s2 0.5
+T: a1 : s1 : s6 1.0
+T: a1 : s2 : s5 1.0
+T: a1 : s3 : s0 1.0
+T: a1 : s4 : s0 1.0
+T: a1 : s5 : s0 1.0
+T: a1 : s6 : s0 1.0
+R: a1 : s5 : * : * 2.0
+T: a2 : s0 : s1 0.5
+T: a2 : s0 : s2 0.5
+T: a2 : s1 : s5 1.0
+T: a2 : s2 : s6 1.0
+T: a2 : s3 : s0 1.0
+T: a2 : s4 : s0 1.0
+T: a2 : s5 : s0 1.0
+T: a2 : s6 : s0 1.0
+R: a2 : s5 : * : * 2.0
+O: * : * 0.0 1.0 0.0 0.0 0.0 0.0
+O: * : s0 1.0 0.0 0.0 0.0 0.0 0.0
+O: * : s3 0.0 0.0 1.0 0.0 0.0 0.0
+O: * : s4 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s5 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s6 0.0 0.0 0.0 0.0 0.0 1.0

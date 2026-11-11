@@ -1,0 +1,68 @@
+# Finite-horizon settings and termination are in the companion TOML file.
+discount: 1.0
+values: reward
+states: s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 s21 s22 s23 s24 s25 s26 s27
+actions: forward turn_left turn_right
+observations: cue_L_side_left cue_L_side_right cue_R_side_left cue_R_side_right corridor corridor_left corridor_right junction
+start: 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0
+T: forward : s0 : s1 1.0
+T: forward : s1 : s2 1.0
+T: forward : s2 : s3 1.0
+T: forward : s3 : s4 1.0
+T: forward : s4 : s5 1.0
+T: forward : s5 : s6 1.0
+T: forward : s6 : s6 1.0
+T: forward : s7 : s8 1.0
+T: forward : s8 : s9 1.0
+T: forward : s9 : s10 1.0
+T: forward : s10 : s11 1.0
+T: forward : s11 : s12 1.0
+T: forward : s12 : s13 1.0
+T: forward : s13 : s13 1.0
+T: forward : s14 : s15 1.0
+T: forward : s15 : s16 1.0
+T: forward : s16 : s17 1.0
+T: forward : s17 : s18 1.0
+T: forward : s18 : s19 1.0
+T: forward : s19 : s20 1.0
+T: forward : s20 : s20 1.0
+T: forward : s21 : s22 1.0
+T: forward : s22 : s23 1.0
+T: forward : s23 : s24 1.0
+T: forward : s24 : s25 1.0
+T: forward : s25 : s26 1.0
+T: forward : s26 : s27 1.0
+T: forward : s27 : s27 1.0
+R: forward : s6 : * : * -0.1
+R: forward : s13 : * : * -0.1
+R: forward : s20 : * : * -0.1
+R: forward : s27 : * : * -0.1
+T: turn_left identity
+R: turn_left : * : * : * -0.1
+R: turn_left : s6 : * : * 4.0
+R: turn_left : s13 : * : * 4.0
+R: turn_left : s20 : * : * -4.0
+R: turn_left : s27 : * : * -4.0
+T: turn_right identity
+R: turn_right : * : * : * -0.1
+R: turn_right : s6 : * : * -4.0
+R: turn_right : s13 : * : * -4.0
+R: turn_right : s20 : * : * 4.0
+R: turn_right : s27 : * : * 4.0
+O: * : * 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+O: * : s1 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s3 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s5 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s6 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s8 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s10 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s12 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s13 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s15 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+O: * : s17 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s19 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s20 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s22 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0
+O: * : s24 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s26 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s27 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0

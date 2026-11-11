@@ -1,0 +1,133 @@
+# Separate two-hour CPU FiVI references, one thread.
+
+[[runs]]
+problem = "../models/1d.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/4x3.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/4x4.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/aloha10.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/cheese.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/hallway.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/hallway2.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/milos.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/mit.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/parr95.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/shuttle.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200

@@ -1,0 +1,21 @@
+# Finite-horizon settings and termination are in the companion TOML file.
+discount: 1.0
+values: reward
+states: tiger_left tiger_right
+actions: listen open_left open_right
+observations: hear_left hear_right
+start: uniform
+T: listen identity
+R: listen : * : * : * -1.0
+T: open_left : * : tiger_left 0.5
+T: open_left : * : tiger_right 0.5
+R: open_left : tiger_left : * : * -100.0
+R: open_left : tiger_right : * : * 10.0
+T: open_right : * : tiger_left 0.5
+T: open_right : * : tiger_right 0.5
+R: open_right : tiger_left : * : * 10.0
+R: open_right : tiger_right : * : * -100.0
+O: * uniform
+O: listen
+0.85 0.15000000000000002
+0.15000000000000002 0.85

@@ -1,0 +1,5 @@
+model = "rocksample_n4_k4_H20.pomdp"
+horizon = 20
+discount = 1.0
+terminal_actions = []
+terminal_states = []

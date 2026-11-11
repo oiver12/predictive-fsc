@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools==80.9.0", "pybind11==3.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "predictive-fsc"
+version = "1.0.0"
+description = "Predictive initialization of finite-state controllers for finite-horizon POMDPs"
+license = "MIT"
+authors = [{ name = "Oliver Baumgartner" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "numba>=0.61", "matplotlib>=3.8", "threadpoolctl>=3.5"]
+
+[project.scripts]
+predictive-fsc = "predictive_fsc.cli:main"
+
+[project.optional-dependencies]
+dev = ["pyright==1.1.414"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pyright]
+# Check shared data boundaries and experiment launchers; numerical helpers stay incremental.
+include = [
+    "src/predictive_fsc/baselines/_docker.py",
+    "src/predictive_fsc/baselines/fivi.py",
+    "src/predictive_fsc/baselines/saynt.py",
+    "src/predictive_fsc/cli.py",
+    "src/predictive_fsc/reproduction.py",
+    "src/predictive_fsc/analysis/records.py",
+    "src/predictive_fsc/analysis/statistics.py",
+    "src/predictive_fsc/analysis/paper.py",
+    "src/predictive_fsc/analysis/navigation.py",
+    "tools/reproduce_parallel.py",
+]
+pythonVersion = "3.11"
+typeCheckingMode = "basic"
+venvPath = "."
+venv = ".venv"
+extraPaths = ["src"]
+
+
+[tool.ruff.lint]
+ignore = ["I001", "C408", "PLW1510", "RUF022"]
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { file = "setup.py" }, { file = "cpp/**/*.cpp" }, { file = "src/**/*.py" }]

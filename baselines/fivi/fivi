@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+if [ "$#" -eq 0 ] || [ "$1" = "--help" ]; then
+    printf '%s\n' 'Usage: fivi --model FILE --seed N [--budget SECONDS] [--clock cpu|wall] [--iterations N] [--parallelism N]' \
+        'Corrected source: d97f25187803f52b46ebcf040bf9fb8b5e832ed2; build identity: /opt/fivi/build.json'
+    exit 0
+fi
+exec java -Xmx"${FIVI_HEAP:-3g}" -XX:ActiveProcessorCount="${FIVI_PROCESSORS:-1}" \
+    -Djava.library.path=/opt/fivi/native -jar /opt/fivi/fivi.jar "$@"

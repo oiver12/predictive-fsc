@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "predictive-fsc"
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/oiver12/predictive-fsc"
+authors:
+  - family-names: Baumgartner
+    given-names: Oliver
+  - family-names: Schmid
+    given-names: Niklas
+  - family-names: Cregg
+    given-names: Liam
+  - family-names: Wallington
+    given-names: Kevin
+  - family-names: Lygeros
+    given-names: John
+preferred-citation:
+  type: conference-paper
+  title: "Predictive Initialization of Finite-State Controllers for POMDPs"
+  authors:
+    - family-names: Baumgartner
+      given-names: Oliver
+    - family-names: Schmid
+      given-names: Niklas
+    - family-names: Cregg
+      given-names: Liam
+    - family-names: Wallington
+      given-names: Kevin
+    - family-names: Lygeros
+      given-names: John
+  collection-title: "Proceedings of the Learning for Dynamics and Control Conference (L4DC)"
+  year: 2027

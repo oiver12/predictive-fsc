@@ -1,0 +1,14 @@
+# Tiger H8: 2,000 random starts and an independently checked FiVI reference.
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = 4
+initialization = "random"
+seed = 0
+rounds = 2000
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450

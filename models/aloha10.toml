@@ -1,0 +1,5 @@
+model = "aloha10.pomdp"
+horizon = 30
+discount = 1.0
+terminal_actions = []
+terminal_states = []

@@ -1,0 +1,5 @@
+model = "line4_2goals.pomdp"
+horizon = 12
+discount = 1.0
+terminal_actions = []
+terminal_states = []

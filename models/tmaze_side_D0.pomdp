@@ -1,0 +1,44 @@
+# Finite-horizon settings and termination are in the companion TOML file.
+discount: 1.0
+values: reward
+states: s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11
+actions: forward turn_left turn_right
+observations: cue_L_side_left cue_L_side_right cue_R_side_left cue_R_side_right corridor corridor_left corridor_right junction
+start: 0.25 0.0 0.0 0.25 0.0 0.0 0.25 0.0 0.0 0.25 0.0 0.0
+T: forward : s0 : s1 1.0
+T: forward : s1 : s2 1.0
+T: forward : s2 : s2 1.0
+T: forward : s3 : s4 1.0
+T: forward : s4 : s5 1.0
+T: forward : s5 : s5 1.0
+T: forward : s6 : s7 1.0
+T: forward : s7 : s8 1.0
+T: forward : s8 : s8 1.0
+T: forward : s9 : s10 1.0
+T: forward : s10 : s11 1.0
+T: forward : s11 : s11 1.0
+R: forward : s2 : * : * -0.1
+R: forward : s5 : * : * -0.1
+R: forward : s8 : * : * -0.1
+R: forward : s11 : * : * -0.1
+T: turn_left identity
+R: turn_left : * : * : * -0.1
+R: turn_left : s2 : * : * 4.0
+R: turn_left : s5 : * : * 4.0
+R: turn_left : s8 : * : * -4.0
+R: turn_left : s11 : * : * -4.0
+T: turn_right identity
+R: turn_right : * : * : * -0.1
+R: turn_right : s2 : * : * -4.0
+R: turn_right : s5 : * : * -4.0
+R: turn_right : s8 : * : * 4.0
+R: turn_right : s11 : * : * 4.0
+O: * : * 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+O: * : s1 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s4 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s7 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+O: * : s8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s10 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0
+O: * : s11 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0

@@ -1,0 +1,236 @@
+# Finite-horizon settings and termination are in the companion TOML file.
+discount: 1.0
+values: reward
+states: s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 s21 s22 s23 s24 s25 s26 s27 s28 s29 s30 s31 s32 s33 s34 s35 s36 s37 s38 s39 s40 s41 s42 s43 s44 s45 s46 s47 s48 s49 s50 s51 s52 s53 s54 s55 s56 s57 s58 s59 s60 s61 s62 s63 s64 s65 s66 s67 s68 s69 s70 s71 s72 s73 s74 s75 s76 s77 s78 s79 s80 s81 s82 s83 s84 s85 s86 s87 s88 s89 s90 s91 s92 s93 s94 s95 s96 s97 s98 s99 s100 s101 s102 s103 s104 s105 s106 s107 s108 s109 s110 s111 s112 s113 s114 s115 s116 s117 s118 s119 s120 s121 s122 s123 s124 s125 s126 s127 s128 s129 s130 s131 s132 s133 s134 s135 s136 s137 s138 s139
+actions: forward turn_left turn_right
+observations: cue_L_side_left cue_L_side_right cue_R_side_left cue_R_side_right corridor corridor_left corridor_right junction
+start: 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+T: forward : s0 : s1 1.0
+T: forward : s1 : s2 1.0
+T: forward : s2 : s3 1.0
+T: forward : s3 : s4 1.0
+T: forward : s4 : s5 1.0
+T: forward : s5 : s6 1.0
+T: forward : s6 : s7 1.0
+T: forward : s7 : s8 1.0
+T: forward : s8 : s9 1.0
+T: forward : s9 : s10 1.0
+T: forward : s10 : s11 1.0
+T: forward : s11 : s12 1.0
+T: forward : s12 : s13 1.0
+T: forward : s13 : s14 1.0
+T: forward : s14 : s15 1.0
+T: forward : s15 : s16 1.0
+T: forward : s16 : s17 1.0
+T: forward : s17 : s18 1.0
+T: forward : s18 : s19 1.0
+T: forward : s19 : s20 1.0
+T: forward : s20 : s21 1.0
+T: forward : s21 : s22 1.0
+T: forward : s22 : s23 1.0
+T: forward : s23 : s24 1.0
+T: forward : s24 : s25 1.0
+T: forward : s25 : s26 1.0
+T: forward : s26 : s27 1.0
+T: forward : s27 : s28 1.0
+T: forward : s28 : s29 1.0
+T: forward : s29 : s30 1.0
+T: forward : s30 : s31 1.0
+T: forward : s31 : s32 1.0
+T: forward : s32 : s33 1.0
+T: forward : s33 : s34 1.0
+T: forward : s34 : s34 1.0
+T: forward : s35 : s36 1.0
+T: forward : s36 : s37 1.0
+T: forward : s37 : s38 1.0
+T: forward : s38 : s39 1.0
+T: forward : s39 : s40 1.0
+T: forward : s40 : s41 1.0
+T: forward : s41 : s42 1.0
+T: forward : s42 : s43 1.0
+T: forward : s43 : s44 1.0
+T: forward : s44 : s45 1.0
+T: forward : s45 : s46 1.0
+T: forward : s46 : s47 1.0
+T: forward : s47 : s48 1.0
+T: forward : s48 : s49 1.0
+T: forward : s49 : s50 1.0
+T: forward : s50 : s51 1.0
+T: forward : s51 : s52 1.0
+T: forward : s52 : s53 1.0
+T: forward : s53 : s54 1.0
+T: forward : s54 : s55 1.0
+T: forward : s55 : s56 1.0
+T: forward : s56 : s57 1.0
+T: forward : s57 : s58 1.0
+T: forward : s58 : s59 1.0
+T: forward : s59 : s60 1.0
+T: forward : s60 : s61 1.0
+T: forward : s61 : s62 1.0
+T: forward : s62 : s63 1.0
+T: forward : s63 : s64 1.0
+T: forward : s64 : s65 1.0
+T: forward : s65 : s66 1.0
+T: forward : s66 : s67 1.0
+T: forward : s67 : s68 1.0
+T: forward : s68 : s69 1.0
+T: forward : s69 : s69 1.0
+T: forward : s70 : s71 1.0
+T: forward : s71 : s72 1.0
+T: forward : s72 : s73 1.0
+T: forward : s73 : s74 1.0
+T: forward : s74 : s75 1.0
+T: forward : s75 : s76 1.0
+T: forward : s76 : s77 1.0
+T: forward : s77 : s78 1.0
+T: forward : s78 : s79 1.0
+T: forward : s79 : s80 1.0
+T: forward : s80 : s81 1.0
+T: forward : s81 : s82 1.0
+T: forward : s82 : s83 1.0
+T: forward : s83 : s84 1.0
+T: forward : s84 : s85 1.0
+T: forward : s85 : s86 1.0
+T: forward : s86 : s87 1.0
+T: forward : s87 : s88 1.0
+T: forward : s88 : s89 1.0
+T: forward : s89 : s90 1.0
+T: forward : s90 : s91 1.0
+T: forward : s91 : s92 1.0
+T: forward : s92 : s93 1.0
+T: forward : s93 : s94 1.0
+T: forward : s94 : s95 1.0
+T: forward : s95 : s96 1.0
+T: forward : s96 : s97 1.0
+T: forward : s97 : s98 1.0
+T: forward : s98 : s99 1.0
+T: forward : s99 : s100 1.0
+T: forward : s100 : s101 1.0
+T: forward : s101 : s102 1.0
+T: forward : s102 : s103 1.0
+T: forward : s103 : s104 1.0
+T: forward : s104 : s104 1.0
+T: forward : s105 : s106 1.0
+T: forward : s106 : s107 1.0
+T: forward : s107 : s108 1.0
+T: forward : s108 : s109 1.0
+T: forward : s109 : s110 1.0
+T: forward : s110 : s111 1.0
+T: forward : s111 : s112 1.0
+T: forward : s112 : s113 1.0
+T: forward : s113 : s114 1.0
+T: forward : s114 : s115 1.0
+T: forward : s115 : s116 1.0
+T: forward : s116 : s117 1.0
+T: forward : s117 : s118 1.0
+T: forward : s118 : s119 1.0
+T: forward : s119 : s120 1.0
+T: forward : s120 : s121 1.0
+T: forward : s121 : s122 1.0
+T: forward : s122 : s123 1.0
+T: forward : s123 : s124 1.0
+T: forward : s124 : s125 1.0
+T: forward : s125 : s126 1.0
+T: forward : s126 : s127 1.0
+T: forward : s127 : s128 1.0
+T: forward : s128 : s129 1.0
+T: forward : s129 : s130 1.0
+T: forward : s130 : s131 1.0
+T: forward : s131 : s132 1.0
+T: forward : s132 : s133 1.0
+T: forward : s133 : s134 1.0
+T: forward : s134 : s135 1.0
+T: forward : s135 : s136 1.0
+T: forward : s136 : s137 1.0
+T: forward : s137 : s138 1.0
+T: forward : s138 : s139 1.0
+T: forward : s139 : s139 1.0
+R: forward : s34 : * : * -0.1
+R: forward : s69 : * : * -0.1
+R: forward : s104 : * : * -0.1
+R: forward : s139 : * : * -0.1
+T: turn_left identity
+R: turn_left : * : * : * -0.1
+R: turn_left : s34 : * : * 4.0
+R: turn_left : s69 : * : * 4.0
+R: turn_left : s104 : * : * -4.0
+R: turn_left : s139 : * : * -4.0
+T: turn_right identity
+R: turn_right : * : * : * -0.1
+R: turn_right : s34 : * : * -4.0
+R: turn_right : s69 : * : * -4.0
+R: turn_right : s104 : * : * 4.0
+R: turn_right : s139 : * : * 4.0
+O: * : * 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+O: * : s1 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s3 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s5 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s7 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s9 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s11 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s13 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s15 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s17 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s19 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s21 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s23 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s25 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s27 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s29 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s31 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s33 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s34 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s36 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s38 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s40 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s42 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s44 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s46 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s48 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s50 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s52 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s54 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s56 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s58 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s60 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s62 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s64 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s66 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s68 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s69 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s71 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+O: * : s73 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s75 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s77 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s79 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s81 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s83 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s85 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s87 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s89 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s91 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s93 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s95 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s97 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s99 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s101 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s103 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s104 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s106 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0
+O: * : s108 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s110 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s112 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s114 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s116 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s118 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s120 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s122 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s124 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s126 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s128 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s130 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s132 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s134 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s136 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s138 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s139 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0

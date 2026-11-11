@@ -1,0 +1,5 @@
+model = "4x4.pomdp"
+horizon = 20
+discount = 1.0
+terminal_actions = []
+terminal_states = []

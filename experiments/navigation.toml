@@ -1,0 +1,274 @@
+# Navigation: matched 600 CPU seconds, four seeds; FiVI uses one thread.
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 4
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 600
+heap = "48g"
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 4
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 600
+heap = "48g"
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 4
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 600
+heap = "48g"

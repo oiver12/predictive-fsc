@@ -1,0 +1,5 @@
+model = "nav_W16_k3_H60.pomdp"
+horizon = 60
+discount = 1.0
+terminal_actions = []
+terminal_states = []

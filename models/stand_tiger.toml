@@ -1,0 +1,5 @@
+model = "stand_tiger.pomdp"
+horizon = 8
+discount = 1.0
+terminal_actions = []
+terminal_states = []

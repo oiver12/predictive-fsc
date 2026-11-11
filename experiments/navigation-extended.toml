@@ -1,0 +1,28 @@
+# Extended navigation: W20 wall clock/32 threads; W16 CPU/one thread. Needs 32 cores and >48 GiB RAM per job.
+
+[[runs]]
+problem = "../models/nav_W20_k3_H76.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+budget_clock = "wall"
+parallelism = 32
+heap = "48g"
+
+[[runs]]
+problem = "../models/nav_W20_k1_H76.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+budget_clock = "wall"
+parallelism = 32
+heap = "48g"
+
+[[runs]]
+problem = "../models/nav_W16_k3_H60.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 7200
+budget_clock = "cpu"
+parallelism = 1
+heap = "48g"

@@ -1,0 +1,140 @@
+# Finite-horizon settings and termination are in the companion TOML file.
+discount: 1.0
+values: reward
+states: s0 s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 s21 s22 s23 s24 s25 s26 s27 s28 s29 s30 s31 s32 s33 s34 s35 s36 s37 s38 s39 s40 s41 s42 s43 s44 s45 s46 s47 s48 s49 s50 s51 s52 s53 s54 s55 s56 s57 s58 s59 s60 s61 s62 s63 s64 s65 s66 s67 s68 s69 s70 s71 s72 s73 s74 s75
+actions: forward turn_left turn_right
+observations: cue_L_side_left cue_L_side_right cue_R_side_left cue_R_side_right corridor corridor_left corridor_right junction
+start: 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.25 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+T: forward : s0 : s1 1.0
+T: forward : s1 : s2 1.0
+T: forward : s2 : s3 1.0
+T: forward : s3 : s4 1.0
+T: forward : s4 : s5 1.0
+T: forward : s5 : s6 1.0
+T: forward : s6 : s7 1.0
+T: forward : s7 : s8 1.0
+T: forward : s8 : s9 1.0
+T: forward : s9 : s10 1.0
+T: forward : s10 : s11 1.0
+T: forward : s11 : s12 1.0
+T: forward : s12 : s13 1.0
+T: forward : s13 : s14 1.0
+T: forward : s14 : s15 1.0
+T: forward : s15 : s16 1.0
+T: forward : s16 : s17 1.0
+T: forward : s17 : s18 1.0
+T: forward : s18 : s18 1.0
+T: forward : s19 : s20 1.0
+T: forward : s20 : s21 1.0
+T: forward : s21 : s22 1.0
+T: forward : s22 : s23 1.0
+T: forward : s23 : s24 1.0
+T: forward : s24 : s25 1.0
+T: forward : s25 : s26 1.0
+T: forward : s26 : s27 1.0
+T: forward : s27 : s28 1.0
+T: forward : s28 : s29 1.0
+T: forward : s29 : s30 1.0
+T: forward : s30 : s31 1.0
+T: forward : s31 : s32 1.0
+T: forward : s32 : s33 1.0
+T: forward : s33 : s34 1.0
+T: forward : s34 : s35 1.0
+T: forward : s35 : s36 1.0
+T: forward : s36 : s37 1.0
+T: forward : s37 : s37 1.0
+T: forward : s38 : s39 1.0
+T: forward : s39 : s40 1.0
+T: forward : s40 : s41 1.0
+T: forward : s41 : s42 1.0
+T: forward : s42 : s43 1.0
+T: forward : s43 : s44 1.0
+T: forward : s44 : s45 1.0
+T: forward : s45 : s46 1.0
+T: forward : s46 : s47 1.0
+T: forward : s47 : s48 1.0
+T: forward : s48 : s49 1.0
+T: forward : s49 : s50 1.0
+T: forward : s50 : s51 1.0
+T: forward : s51 : s52 1.0
+T: forward : s52 : s53 1.0
+T: forward : s53 : s54 1.0
+T: forward : s54 : s55 1.0
+T: forward : s55 : s56 1.0
+T: forward : s56 : s56 1.0
+T: forward : s57 : s58 1.0
+T: forward : s58 : s59 1.0
+T: forward : s59 : s60 1.0
+T: forward : s60 : s61 1.0
+T: forward : s61 : s62 1.0
+T: forward : s62 : s63 1.0
+T: forward : s63 : s64 1.0
+T: forward : s64 : s65 1.0
+T: forward : s65 : s66 1.0
+T: forward : s66 : s67 1.0
+T: forward : s67 : s68 1.0
+T: forward : s68 : s69 1.0
+T: forward : s69 : s70 1.0
+T: forward : s70 : s71 1.0
+T: forward : s71 : s72 1.0
+T: forward : s72 : s73 1.0
+T: forward : s73 : s74 1.0
+T: forward : s74 : s75 1.0
+T: forward : s75 : s75 1.0
+R: forward : s18 : * : * -0.1
+R: forward : s37 : * : * -0.1
+R: forward : s56 : * : * -0.1
+R: forward : s75 : * : * -0.1
+T: turn_left identity
+R: turn_left : * : * : * -0.1
+R: turn_left : s18 : * : * 4.0
+R: turn_left : s37 : * : * 4.0
+R: turn_left : s56 : * : * -4.0
+R: turn_left : s75 : * : * -4.0
+T: turn_right identity
+R: turn_right : * : * : * -0.1
+R: turn_right : s18 : * : * -4.0
+R: turn_right : s37 : * : * -4.0
+R: turn_right : s56 : * : * 4.0
+R: turn_right : s75 : * : * 4.0
+O: * : * 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0
+O: * : s1 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s3 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s5 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s7 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s9 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s11 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s13 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s15 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s17 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s18 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s20 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0
+O: * : s22 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s24 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s26 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s28 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s30 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s32 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s34 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s36 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s37 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s39 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0
+O: * : s41 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s43 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s45 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s47 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s49 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s51 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s53 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s55 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0
+O: * : s56 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0
+O: * : s58 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0
+O: * : s60 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s62 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s64 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s66 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s68 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s70 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s72 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s74 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0
+O: * : s75 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0

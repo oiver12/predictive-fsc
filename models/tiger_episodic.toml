@@ -1,0 +1,5 @@
+model = "tiger_episodic.pomdp"
+horizon = 8
+discount = 1.0
+terminal_actions = ["open_left", "open_right"]
+terminal_states = []

@@ -1,0 +1,2113 @@
+# Main study: halving uses total 3B; M1 random anchors use B. SearchConfig fixes the paper defaults.
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/1d.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/1d_noisy.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x3.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/4x3.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x4.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/4x4.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/4x5x2.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/aloha10.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/aloha10.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/bridge_repair.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/cheese.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/cheese.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/hallway.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/hallway.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/hallway2.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/hallway2.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/line4_2goals.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/milos.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/milos.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/mini_hall2.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/mit.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/mit.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/parr95.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/parr95.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/shuttle.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/shuttle.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/tiger_episodic.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/stand_tiger.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/tiger_grid.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 150
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/tmaze_L12.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 450
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/rocksample_n4_k4_H20.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = 1
+seed = 2026102901
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = 1
+seed = 2026102902
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = 1
+seed = 2026102903
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "predictive"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = [2, 4, 8, 16]
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+memory = 1
+seed = 2026102904
+initialization = "random"
+cpu_seconds = 600
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+solver = "fivi"
+seed = 2026102901
+budget_seconds = 1800
+
+[[runs]]
+problem = "../models/rocksample_n5_k4_H23.toml"
+solver = "saynt"
+seed = 2026102901
+budget_seconds = 1800

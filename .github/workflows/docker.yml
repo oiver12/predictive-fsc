@@ -1,0 +1,37 @@
+# Build the core image, run a short solve inside it, and publish it to GHCR on version tags.
+name: docker
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: docker build --build-arg SOURCE_REVISION="$GITHUB_SHA" -t predictive-fsc .
+      - name: Smoke run
+        run: |
+          mkdir -p out && chmod 777 out
+          docker run --rm --network none -v "$PWD/out:/outputs" predictive-fsc validate models/tiger_episodic.toml
+          docker run --rm --network none -v "$PWD/out:/outputs" predictive-fsc \
+            solve models/tiger_episodic.toml --memory 2 --rounds 2 --seed 1 --output /outputs/tiger.npz
+          docker run --rm --network none -v "$PWD/out:/outputs" predictive-fsc \
+            evaluate models/tiger_episodic.toml /outputs/tiger.npz
+      - name: Publish
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          image=ghcr.io/${GITHUB_REPOSITORY,,}
+          for tag in "${GITHUB_REF_NAME}" latest; do
+            docker tag predictive-fsc "$image:$tag"
+            docker push "$image:$tag"
+          done

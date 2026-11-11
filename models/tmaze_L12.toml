@@ -1,0 +1,5 @@
+model = "tmaze_L12.pomdp"
+horizon = 15
+discount = 1.0
+terminal_actions = ["turn_left", "turn_right"]
+terminal_states = []
