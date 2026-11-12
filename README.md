@@ -1,42 +1,67 @@
-# Predictive Initialization of Finite-State Controllers for POMDPs
+<div align="center">
 
-Code and experiments for the paper **Predictive Initialization of Finite-State Controllers for POMDPs**
-by Oliver Baumgartner, Niklas Schmid, Liam Cregg, Kevin Wallington and John Lygeros
-(Automatic Control Laboratory, ETH Zurich). <!-- TODO: paper link (L4DC 2027 / arXiv) -->
+# MAPO
+### Predictive Initialization of Finite-State Controllers for POMDPs
 
-Finite-state controllers compress a POMDP's history into a few memory states, but optimizing
-their memory and actions with policy iteration often gets stuck in poor local optima.
-**MAPO** initializes the controller *predictively*. It trains a small memory that, together
-with the current observation and action, predicts the next observation and reward. Policy
-iteration on the known POMDP then refines the extracted controller, and the procedure repeats
-with trajectories from the improved controller.
+Code and experiments for the paper above.
 
-![MAPO pipeline](assets/method.png)
+Oliver Baumgartner · Niklas Schmid · Liam Cregg · Kevin Wallington · John Lygeros<br>
+Automatic Control Laboratory, ETH Zurich
+
+[How it works](#how-it-works) · [Results](#results) · [Quick start](#quick-start) · [Reproduce the paper](#reproduce-the-paper) · [Citation](#citation)
+
+</div>
+
+![Two saved four-memory-state controllers navigating with noisy beacon observations: MAPO reaches the goal, while policy iteration from random initialization stays near the start.](assets/navigation-demo.gif)
+
+*Navigation with four memory states. The robot knows the map but observes only noisy beacon readings. MAPO heads toward a beacon, then follows the boundary to the goal. Policy iteration from random initialization stays near the start.*
+
+The robot’s position is shown for illustration; the controller uses its observations, memory, and current time step. [Static image](assets/navigation-demo.png)
+
+| **4 memory states** | **17 / 22 benchmarks** | **≈5,000× smaller** |
+| :---: | :---: | :---: |
+| [Long-horizon navigation](#robot-navigation) | [Matches or exceeds FiVI](#standard-benchmarks) | [Stored navigation policy vs. FiVI](#robot-navigation) |
+
+## How it works
+
+A finite-state controller solves a partially observable Markov decision process (POMDP) by keeping a small memory of past observations and actions. Policy iteration improves the controller, but often gets stuck: a memory update is useful only if a later action uses the information it stores. In our Tiger experiment, only **3% of randomly initialized controllers** achieve positive return after policy iteration converges.
+
+We use predictive initialization to give policy iteration a better starting point. **MAPO** (memory-augmented policy optimization) fits a small memory to simulated trajectories, training it to predict the next observation and reward given the current observation and action. We extract a controller from this model, refine it with policy iteration on the known POMDP, and repeat using trajectories from the improved controller.
+
+![MAPO loop: collect trajectories, fit predictive memory, extract a controller, improve it through policy iteration, and collect new exploratory trajectories.](assets/method.png)
+
+The controller is deterministic and stage-dependent: its action and memory-update rules can change with the time remaining in the episode.
 
 ## Results
 
-On long-horizon robot navigation, MAPO achieves higher returns than the belief-based solver
-FiVI, with more than 10× lower planning cost and a stored policy about 5,000× smaller.
-Across 22 standard POMDP benchmarks it matches or exceeds FiVI on 17, improving returns by up
-to 21% and losing at most 6.3% on the remaining five.
+### Standard benchmarks
 
-![Predictive versus random initialization](assets/initialization.png)
+With the same total CPU budget, MAPO **matches or exceeds FiVI on 17 of 22 POMDP benchmarks**. Returns improve by up to 21%; on the five benchmarks where FiVI performs better, MAPO falls behind by at most 6.3%. FiVI’s policies use a median of 82× as much storage as MAPO’s.
 
-*Predictive versus random initialization (IQM across benchmarks). Left: memory benefit from
-one initialization followed by policy iteration. Middle: after 75 CPU seconds per memory size.
-Right: anytime memory benefit at M = 4.*
+![Predictive versus random initialization: memory benefit across controller sizes, at equal computation, and over search time.](assets/initialization.png)
 
-![Navigation](assets/navigation.png)
+*Improvement over memoryless policies, aggregated using the interquartile mean. Left: one initialization followed by policy iteration. Middle: 75 CPU seconds per memory size. Right: search over time at M = 4. The aggregate excludes three benchmarks with negligible memory benefit; the solver comparison includes all 22.*
 
-*Navigation on a 20×20 grid with beacon sensing range k = 3. Left and middle: pre-goal
-occupation and a sampled path for MAPO and for policy iteration from a random initialization.
-Right: best return so far for four seeds (thick line: median). FiVI finds no policy within the
-budget.*
+### Robot navigation
 
-## Quick start with Docker
+On the 20×20 grid (beacon range 3, horizon 76), all four MAPO runs find controllers with a goal-reaching probability above 0.999. The random-initialization baseline returns −76 in every run. FiVI finds no policy within 600 CPU seconds; after two wall-clock hours, its return is 6.61, compared with 10.10 for MAPO.
 
-The image contains the package, all models and the experiment plans. It needs no network
-access at runtime.
+| Method | Planning allowance | Expected return | Policy storage |
+| --- | --- | ---: | ---: |
+| **MAPO, M = 4** | **600 CPU seconds** | **10.10 ± 0.18** | **15.0 kB** |
+| PI, random initialization, M = 4 | 600 CPU seconds | −76.00 ± 0.00 | 15.0 kB |
+| FiVI | 600 CPU seconds | No policy | — |
+| FiVI, extended | 2 wall-clock hours, 32 threads | 6.61 | 71,570 kB |
+
+*MAPO and random PI: mean ± standard deviation over four seeds. Policy storage counts numerical entries, excluding the model and file overhead. The extended FiVI run uses 32 threads for two wall-clock hours; the other budgets are CPU time.*
+
+![Navigation occupation maps, sample paths, and expected return versus CPU time for MAPO, random-initialized policy iteration, and FiVI.](assets/navigation.png)
+
+*MAPO visits a beacon before following the right boundary. The curves show four seeds and their median; the paths illustrate individual rollouts.*
+
+## Quick start
+
+With Docker installed, the following commands solve and evaluate Tiger. The image includes the package, models, and experiment plans.
 
 ```sh
 docker pull ghcr.io/oiver12/predictive-fsc:latest
@@ -44,190 +69,59 @@ mkdir -p outputs
 docker run --rm --network none --user "$(id -u):$(id -g)" \
   -v "$PWD/outputs:/outputs" ghcr.io/oiver12/predictive-fsc \
   solve models/tiger_episodic.toml --memory 4 --cpu-seconds 30 --output /outputs/tiger.npz
-docker run --rm -v "$PWD/outputs:/outputs" ghcr.io/oiver12/predictive-fsc \
+docker run --rm --network none -v "$PWD/outputs:/outputs" \
+  ghcr.io/oiver12/predictive-fsc \
   evaluate models/tiger_episodic.toml /outputs/tiger.npz
 ```
 
-To build the image yourself:
+For local installation, use Python ≥ 3.11 and a C++17 compiler:
 
 ```sh
-docker build --build-arg SOURCE_REVISION="$(git rev-parse HEAD)" -t predictive-fsc .
-```
-
-The image runs MAPO and the random-initialization baseline (`solve`, `halving`, `evaluate`,
-`figures`, and plans without external solvers). FiVI and SAYNT run in their own containers,
-which the host-installed CLI starts (see [Baselines](#baselines)).
-
-## Local installation
-
-Requires Python ≥ 3.11 and a C++17 compiler. The EM fit is a C++ extension built during installation.
-
-```sh
-uv sync                        # or: pip install -e .
+uv sync
 source .venv/bin/activate
-predictive-fsc validate models/*.toml
 predictive-fsc solve models/tiger_episodic.toml --memory 4 --cpu-seconds 30
-predictive-fsc halving models/hallway.toml --memory 2 4 8 16 --cpu-seconds 150
 ```
 
-`solve` runs one search; `halving` runs successive halving over several memory sizes. Every
-run is single-threaded and saves an `.npz` with the controller, the candidate trace, settings,
-seeds and build provenance. `predictive-fsc <command> --help` lists all options. A search stops at
-`--cpu-seconds` or `--rounds`, whichever comes first.
+To reproduce a specific revision, [build the image from source](docs/reproduction.md#quick-start-with-docker) rather than using the moving `latest` tag.
 
-## Reproducing the paper
+## Reproduce the paper
 
-Each experiment is a TOML plan of explicit `[[runs]]` entries in `experiments/`:
-
-| Plan | Jobs | Contents |
-| --- | ---: | --- |
-| `main.toml` | 308 | 22 benchmarks × 4 seeds: predictive and random halving over M = 2/4/8/16, random M = 1, FiVI and SAYNT at matched budgets |
-| `main-extended.toml` | 22 | FiVI references, 7,200 CPU seconds |
-| `navigation.toml` | 39 | 3 layouts × 4 seeds: predictive M = 4, random M = 4 and M = 1, FiVI |
-| `navigation-extended.toml` | 3 | FiVI references: W20 7,200 wall seconds on 32 threads, W16 7,200 CPU seconds; 48 GiB heap |
-| `tiger.toml` | 2 | Tiger H = 8, M = 4: 2,000 random starts and a FiVI reference |
-| `appendix/distractor.py` | 240 | Distractor T-maze: 8 distractor lengths × 30 repetitions, M = 2 |
-
-Budgets: B = 150 CPU seconds per memory size (600 for hallway, mit and both RockSample
-problems). Halving uses 3B in total, and the external baselines get the same 3B. Seeds are
-2026102901–2026102904. Navigation runs get 600 CPU seconds.
-
-The main budgets alone add up to 48 CPU hours, the extended references to 44 CPU hours and
-navigation to 6.5 CPU hours. <!-- TODO: replace with measured wall time from the final run -->
-
-### Running plans
+Install the package locally, then build the baseline images and run the experiments:
 
 ```sh
-predictive-fsc reproduce experiments/main.toml --dry-run          # list all jobs
-predictive-fsc reproduce experiments/main.toml --output outputs/main
-predictive-fsc reproduce experiments/main.toml --run-index 7 --output outputs/main   # one job (1-based)
+uv sync
+source .venv/bin/activate
+make baselines
+make reproduce JOBS=8
+make figures
 ```
 
-Completed jobs are skipped when a plan is rerun; `--force` reruns them.
+This runs all five paper plans and the distractor T-maze study. Repeating `make reproduce`
+skips completed jobs. It defaults to one job; choose `JOBS` for your CPU and RAM.
+Both navigation plans run one job at a time because FiVI requests 48 GiB heaps.
+The extended 20×20 navigation runs also use 32 threads.
 
-### In parallel
+`make figures` reads saved results only. Results go under `outputs/`, with figures and
+CSV tables under `outputs/figures/` and appendix plots under `outputs/distractor/`.
+Use `OUTPUTS=/path/to/results` to change the root. Run `make` for help.
 
-Every job is independent and single-threaded. `tools/reproduce_parallel.py` checks the whole
-plan, then uses [GNU Parallel](https://www.gnu.org/software/parallel/) to run one
-`reproduce --run-index N` process per job, at most `--jobs` at a time:
+The full run requires Docker, GNU Make, and GNU Parallel. See the
+[reproduction guide](docs/reproduction.md#run-the-paper) for setup, budgets, and individual commands.
 
-```sh
-python tools/reproduce_parallel.py experiments/main.toml --jobs 16 --output outputs/main-parallel
-python tools/reproduce_parallel.py experiments/main-extended.toml --jobs 16 --output outputs/main-extended-parallel
-python tools/reproduce_parallel.py experiments/navigation.toml --jobs 4 --output outputs/navigation-parallel
-python tools/reproduce_parallel.py experiments/navigation-extended.toml --jobs 1 --output outputs/navigation-extended-parallel
-```
+Each run saves its controller, candidate trace, settings, seeds, and build provenance. Completed jobs are skipped on rerun. CPU-budget results vary with hardware; fixed-round runs are deterministic for a given seed.
 
-Each job writes to `job-N/` (results, stdout, stderr), and `joblog.tsv` records timing and exit
-status. Rerunning the same command resumes the batch and skips finished jobs. Ctrl-C stops the batch and removes
-its solver containers. Choose `--jobs` from your core count and memory. Navigation FiVI jobs
-need large heaps, so run them one at a time.
+## Repository structure
 
-### Figures and tables
-
-```sh
-predictive-fsc figures outputs/main-parallel/job-*/ outputs/main-extended-parallel/job-*/ --paper main --output outputs/figures/main
-predictive-fsc figures outputs/navigation-parallel/job-*/ outputs/navigation-extended-parallel/job-*/ --paper navigation --output outputs/figures/navigation
-predictive-fsc figures outputs/tiger --paper tiger --output outputs/figures/tiger
-python experiments/appendix/distractor.py --output outputs/distractor           # run
-python experiments/appendix/distractor.py --output outputs/distractor --plot    # plot
-```
-
-| Paper item | Output |
+| Directory | Contents |
 | --- | --- |
-| Figure 1a | `--paper tiger` |
-| Figure 3, Table 1, Figure 4 | `--paper main` (initialization panels, `returns-and-storage.csv`, per-benchmark anytime) |
-| Table 2, Figure 5 | `--paper navigation` |
-| Figure 6 / Appendix C.1 | `appendix/distractor.py --plot` |
+| [`src/predictive_fsc/`](src/predictive_fsc/) | Policy iteration, predictive fitting, controller search, CLI, and analysis |
+| [`cpp/`](cpp/) | C++ EM implementation |
+| [`experiments/`](experiments/) | Explicit paper plans and distractor T-maze experiment |
+| [`models/`](models/) | Benchmark POMDPs and finite-horizon problem descriptions |
+| [`baselines/`](baselines/) | FiVI and SAYNT container recipes |
+| [`tools/`](tools/) | Parallel launcher and model generators |
 
-Plotting reads saved results only and never runs a solver. Panels show the paper's quantities
-but are not pixel-identical copies of its layout. Missing results stay blank rather than zero.
-
-### Archived results
-
-The results from our final run are on Zenodo <!-- TODO: DOI + SHA256 -->. Download and
-extract them, then run the `figures` commands above on the extracted directories. This
-regenerates every figure and table without rerunning any solver.
-
-CPU-budget results depend on hardware. Rerun numbers will differ slightly from the archive,
-while runs with a fixed `--rounds` are deterministic for a given seed.
-
-## Baselines
-
-FiVI and SAYNT run in their own pinned Docker images. Build them once on the host that runs
-the plans:
-
-```sh
-docker build -t predictive-fsc .                                      # FiVI builds on the core image
-docker build --platform linux/amd64 -t predictive-fsc-fivi baselines/fivi
-docker build -t predictive-fsc-saynt baselines/saynt                  # compiles Storm; slow
-```
-
-- **FiVI** builds [our corrected fork](https://github.com/oiver12/ConstrainedPlanningToolbox)
-  of Walraven and Spaan's ConstrainedPlanningToolbox at a pinned revision, from a checksummed
-  archive. Reported values are lower bounds, checked
-  against the initial alpha vector. `FIVI_HEAP` and `FIVI_PROCESSORS` set the resources.
-- **SAYNT** builds pinned [PAYNT](https://github.com/randriu/paynt),
-  [Storm](https://github.com/randriu/storm), carl, pycarl and
-  [Stormpy](https://github.com/oiver12/stormpy) (our fork with an ownership fix) and runs PAYNT
-  directly, with 60 s and 10 s phases. Finite horizons are encoded by unrolling stages and
-  shifting rewards.
-
-The adapters (`src/predictive_fsc/baselines/`) convert each problem, run one container per job
-without network access and record the image ID with the result. Upstream sources and licenses
-are kept in the images under `/opt/fivi/source` and `/opt/saynt/source`.
-
-## Problems
-
-Each problem is a standard [Cassandra `.pomdp`](https://pomdp.org/code/pomdp-file-spec.html)
-model plus a small TOML description:
-
-```toml
-model = "tiger_episodic.pomdp"
-horizon = 8
-discount = 1.0
-terminal_actions = ["open_left", "open_right"]
-terminal_states = []
-```
-
-All five fields are required. The objective is the undiscounted finite-horizon return.
-Termination is never inferred, so terminal actions and states must be listed explicitly. A
-terminal step still receives its reward and observation. Rewards are reduced to the expected
-`r(s, a)`. To add a problem, write a `.pomdp` file and a TOML file next to it, then run
-`predictive-fsc validate`.
-
-`models/` contains the 22 benchmarks, three navigation layouts and eight distractor T-mazes.
-Many benchmarks come from Tony Cassandra's [POMDP examples](https://pomdp.org/examples/).
-<!-- TODO: per-model sources for 1d_noisy, line4_2goals, aloha10, bridge_repair, tmaze_* -->
-New RockSample and navigation variants can be generated from explicit parameters:
-
-```sh
-python tools/generate_rocksample.py --help
-python tools/generate_navigation.py --help
-```
-
-## Code layout
-
-```text
-src/predictive_fsc/
-  types.py         data types: POMDP, Problem, Controller, SearchConfig, results
-  dynamics.py      transition preparation, Bellman and occupancy operations
-  policy.py        exact evaluation and policy iteration
-  sampling.py      exploratory trajectory sampling (Numba)
-  em.py            predictive EM fit, implemented in cpp/em.cpp
-  extraction.py    controller extraction from the fitted predictive model
-  search.py        MAPO search and successive halving
-  io/              .pomdp/TOML problems, saved results and provenance
-  baselines/       FiVI and SAYNT adapters
-  reproduction.py  TOML plan execution
-  analysis/        saved-result analysis, paper figures and tables
-  cli.py           command-line interface
-cpp/em.cpp         complete EM fit (pybind11)
-experiments/       paper plans and the distractor appendix script
-models/            .pomdp models and TOML problem descriptions
-baselines/         FiVI and SAYNT image recipes
-tools/             parallel launcher and model generators
-```
+To add a problem, see the [model format and validation instructions](docs/reproduction.md#problems).
 
 ## Citation
 
@@ -239,6 +133,8 @@ tools/             parallel launcher and model generators
   year      = {2027}
 }
 ```
+
+See also [CITATION.cff](CITATION.cff). Publication details are provisional.
 
 ## License and acknowledgements
 
