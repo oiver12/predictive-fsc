@@ -16,7 +16,7 @@ authors:
   - family-names: Lygeros
     given-names: John
 preferred-citation:
-  type: conference-paper
+  type: unpublished
   title: "Predictive Initialization of Finite-State Controllers for POMDPs"
   authors:
     - family-names: Baumgartner
@@ -29,5 +29,5 @@ preferred-citation:
       given-names: Kevin
     - family-names: Lygeros
       given-names: John
-  collection-title: "Proceedings of the Learning for Dynamics and Control Conference (L4DC)"
-  year: 2027
+  notes: "Unpublished manuscript"
+  year: 2026

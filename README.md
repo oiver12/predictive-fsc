@@ -126,15 +126,15 @@ To add a problem, see the [model format and validation instructions](docs/reprod
 ## Citation
 
 ```bibtex
-@inproceedings{baumgartner2027predictive,
-  title     = {Predictive Initialization of Finite-State Controllers for {POMDPs}},
-  author    = {Baumgartner, Oliver and Schmid, Niklas and Cregg, Liam and Wallington, Kevin and Lygeros, John},
-  booktitle = {Proceedings of the Learning for Dynamics and Control Conference (L4DC)},
-  year      = {2027}
+@unpublished{baumgartner2026predictive,
+  title  = {Predictive Initialization of Finite-State Controllers for {POMDPs}},
+  author = {Baumgartner, Oliver and Schmid, Niklas and Cregg, Liam and Wallington, Kevin and Lygeros, John},
+  note   = {Unpublished manuscript},
+  year   = {2026}
 }
 ```
 
-See also [CITATION.cff](CITATION.cff). Publication details are provisional.
+See also [CITATION.cff](CITATION.cff). The paper is currently an unpublished manuscript.
 
 ## License and acknowledgements
 
